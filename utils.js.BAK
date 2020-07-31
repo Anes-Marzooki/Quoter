@@ -1,0 +1,49 @@
+// elements init
+const topCont = document.querySelector('#top-quote-container');
+const topQuote = topCont.querySelector('#top-quote');
+const text = topQuote.querySelector('#text-01');
+
+// Event Listeners
+topQuote.addEventListener("mousedown", mouseDown);
+topQuote.addEventListener("dblclick", toggleEdit);
+topCont.addEventListener("click", clickAway);
+
+// Events
+function mouseDown(event) {
+  console.log('mouseDown')
+  topQuote.style.cursor = "grabbing";
+  
+  topCont.addEventListener("mousemove", mouseMove);
+  topCont.addEventListener("mouseup", mouseUp);
+
+  // Cursor initial position 
+  let offX = event.offsetX;
+  let offY = event.offsetY;
+
+  function mouseMove (event) {
+    console.log('mouseMove')
+    // updated cursor pos
+    let newX = event.pageX - topCont.offsetLeft - offX;
+    let newY = event.pageY - topCont.offsetTop - offY;
+    // move the text's parent
+    topQuote.style.left = newX + "px";
+    topQuote.style.top = newY + "px";
+  }
+
+  function mouseUp() {
+    topCont.removeEventListener("mousemove", mouseMove);
+    topCont.removeEventListener("mouseup", mouseUp);
+    topQuote.style.cursor = "grab";
+  }
+}
+
+function toggleEdit(event) {
+  console.log("dbclick")
+  text.setAttribute("contenteditable", true);
+  text.focus();
+}
+
+function clickAway(event) {
+  text.removeAttribute("contenteditable");
+  text.blur();
+}

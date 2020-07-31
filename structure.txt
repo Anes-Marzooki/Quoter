@@ -1,0 +1,26 @@
+index.js  (stage.init(), onload)
+utils.js (image input , etc...)
+|--Stage 
+	|--index.js
+	|--stage.js
+
+|--Layers
+	|--index.js
+	|--imageLayer.js
+	|--textLayer.js
+
+|--Text
+	|--index.js
+	|--textNode.js
+	|--textTransformer.js
+	|--utils.js
+
+|--Image
+	|--index.js
+	|--imageNode.js
+	|--utils.js
+
+|--controlPanel (buttons, sliders etc...) NOTE: class Button
+	|--index.js
+	|--control.js (button class)
+	|--utils.js

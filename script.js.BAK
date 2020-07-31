@@ -1,0 +1,62 @@
+//var canvasWidth = 600;
+//var canvasHeight = 400;
+//// create a stage
+//  var myStage = new Konva.Stage({
+//    container: 'my-container',
+//    width: canvasWidth,
+//    height: canvasHeight,
+//  });
+//
+//// create and exports layer
+// export let myLayer = new Konva.Layer();
+//
+//// create a shape
+//  var myShapeA = new Konva.Circle({
+//    x: myStage.width() / 2,
+//    y: myStage.height() / 2,
+//    radius: 100,
+//    fill: 'blue',
+//    stroke: 'black',
+//    strokeWidth: 8 
+//  })
+//  var myShapeB = new Konva.Rect({
+//  x: 150,
+//  y: 48,
+//  height: 50,
+//  width: 300,
+//  cornerRadius: 30,
+//  fill: 'red',
+//  stroke: 'black',
+//  strokeWidth: 4 
+//})
+//  
+//// create image shape
+//  var imageObj = new Image();
+//  imageObj.onload = function () {
+//    var myImage = new Konva.Image({
+//      x: 50,
+//      y: 50,
+//      image: imageObj,
+//      width: imageObj.width / 2,
+//      height: imageObj.height / 2,
+//      stroke: "cyan",
+//      strokeWidth: 4
+//    });
+//    myLayer.add(myImage);
+//    myLayer.add(textNode);
+//    myLayer.add(tr);
+//    myLayer.draw();
+//  }
+//  imageObj.src = 'owl.jpg'
+//  
+//// add the shape to the layer
+//
+////  myLayer.add(myShapeB);
+////  myLayer.add(myShapeA);
+//  
+//
+//// add the layer to the stage
+//  myStage.add(myLayer);
+//
+//// draw the image
+//  myLayer.draw();
