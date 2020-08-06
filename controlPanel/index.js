@@ -1,4 +1,5 @@
-import download from './controls.js';
+import controls from './controls.js';
+
 export default {
-  download
+  controls
 }

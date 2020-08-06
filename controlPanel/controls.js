@@ -1,13 +1,13 @@
 import textLayer from '../layers/textLayer.js';
 import tr from '../text/textTransformer.js';
-import imgName from '../image/image_input.js';
-import stage from '../stage/index.js';
 
+import stage from '../stage/index.js';
+import imageLayer from '../layers/imageLayer.js';
 
 // Download
 function downloadURI(uri, name) {
   var link = document.createElement("a");
-  console.log(name);
+  console.log('name', name);
   link.download = name;
   link.href = uri;
   document.body.appendChild(link);
@@ -27,6 +27,25 @@ document.getElementById('download-btn').addEventListener('click', function () {
   downloadURI(dataURL)
 })
 
+// Sliders
+// blur
+document.querySelector('#slider-blur').oninput = () => {
+  blur();
+
+}
+
+function blur() {
+  var slider = document.querySelector('#slider-blur');
+  var originalImg = stage.el.find('#my-image')[0];
+  originalImg.cache();
+  originalImg.filters([Konva.Filters.Blur]);
+  slider.oninput = function () {
+    console.log('blurring');
+    originalImg.blurRadius(slider.value);
+    imageLayer.el.batchDraw();
+  }
+}
 export default {
-  download: downloadURI
+  download: downloadURI,
+  blur: blur
 }

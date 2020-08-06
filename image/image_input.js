@@ -1,5 +1,6 @@
 import imageNode from './imageNode.js';
 import text from '../text/index.js';
+import controls from '../controlPanel/index.js'
 
 let imgName = {};
 const init = () => {
@@ -15,6 +16,8 @@ const handleInputChange = function (e) {
   reader.onloadend = function (e) {
     imageNode.init(e.target.result, (err) => {
       console.log('image callback')
+      //      controls.controls.blur();
+
       text.textNode.init();
       //      text.transformer.init();
     });

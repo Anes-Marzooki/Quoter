@@ -26,3 +26,46 @@ p {
   border-color: trasnparent;
   cursor: text;
 }
+
+#download-btn {
+  display: block;
+}
+
+#icons-container {
+  height: 50px;
+  margin: auto;
+  /*  padding-top: 20px;*/
+  background-color: darkgray;
+  /*  margin-left: 100px;*/
+  /*  margin-right: 200px;*/
+  display: flex;
+  justify-content: center;
+}
+
+#filter-icon {
+  height: 30px;
+}
+
+#btn {
+  background-color: black;
+  /*  border-color: white;*/
+  border-radius: 4px;
+  border-width: 0;
+  margin: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+
+#filters-btn:hover {
+  background-color: dimgrey;
+}
+
+#filter {
+  height: 30px;
+  cursor: pointer;
+}
+
+.icon {
+  background: url('media/filters.png');
+  height: 16px;
+  display: block;
+}

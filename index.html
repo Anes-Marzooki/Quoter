@@ -12,6 +12,7 @@
 
 <body>
   <input type="file" id="input-file" />
+  
   <div id="stage-container"></div>
   <div id="top-quote-container">
     <div id="top-quote">
@@ -19,10 +20,14 @@
     </div>
   </div>
   <div id="sliders-filters">
-    <input type="range" id="slider-blur" min="0" max="100" value="0" step="10">
+    <input type="range" id="slider-blur" min="-100" max="100" value="0" step="10">
   </div>
   <button id="download-btn">Download</button>
-  <button id="test-btn">Test</button>
+  <div id="icons-container">
+    <button id="btn"><img id="filter-icon" src='./media/filters.png'></button> <button id="btn"><img id="filter-icon" src='./media/text.png'></button>
+    <!--    <img id="filter" src="./media/filters.png">-->
+
+  </div>
   <script src="index.js" type="module"></script>
   <!--
   <script src="global.js"></script>
