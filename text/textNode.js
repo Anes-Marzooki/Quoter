@@ -140,9 +140,9 @@ function textAreaInit() {
 function handleTransform() {
   // reset scale, so only width is changing by transformer
   textNode.el.setAttrs({
-    width: textNode.width() * textNode.scaleX(),
+    width: textNode.el.width() * textNode.el.scaleX(),
     scaleX: 1,
-    height: textNode.height() * textNode.scaleY(),
+    height: textNode.el.height() * textNode.el.scaleY(),
     scaleY: 1,
   });
 }
