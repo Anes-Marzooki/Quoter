@@ -112,3 +112,10 @@ function myBlur() {
     layer1.batchDraw();
   }
 }
+// filter btn event
+function toggleFilterMenu() {
+  var menu = document.querySelectorAll('.btn');
+  menu.onclick = function () {
+    document.querySelector('#filters-menu').classList.toggle(hide)
+  }
+}
